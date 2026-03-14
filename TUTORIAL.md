@@ -94,3 +94,10 @@ Add other libraries that we will need.
 ```bash
 pnpm add yup@latest mongoose@latest bcryptjs@latest
 ```
+
+## AppHeader
+- Create a layout directory
+- Create default layout (default.vue)
+- Add NuxtLayout component in App.vue
+- Create components directory in the app directory
+- Inside componentsdirectory, add app-header.vue
