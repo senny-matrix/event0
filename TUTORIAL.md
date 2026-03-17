@@ -114,3 +114,6 @@ pnpm add yup@latest mongoose@latest bcryptjs@latest
   -formData
 - Create onSubmit async function
 - Create the form 
+
+## Client Navigation
+- We will use yup

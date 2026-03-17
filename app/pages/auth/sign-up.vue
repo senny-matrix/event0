@@ -4,7 +4,13 @@
             <h1 class="font-anton text-center mb-6 text-5xl">
                 {{ type === 'sign-up' ? 'Sign Up' : 'Sign In' }}
             </h1>
-            <UForm :state="formData" @submit="onSubmit" class="space-y-4">
+            <UForm 
+            :schema="schema"
+            :state="formData" 
+            @submit="onSubmit" 
+            class="space-y-4"
+            :validation-schema="schema"
+            >
                 <UFormField label="Email" name="email">
                     <UInput 
                         v-model="formData.email" 
@@ -61,6 +67,11 @@
 
 <script setup>
     import * as yup from 'yup';
+
+    const schema = yup.object({
+        email: yup.string().email('Invalid email').required('Email is required'),
+        password: yup.string().min(8, 'Password must be at least 8 characters').required('Password is required'),
+    });
 
     const type = ref('sign-up');
     const loading = ref(false);
