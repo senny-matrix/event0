@@ -101,3 +101,16 @@ pnpm add yup@latest mongoose@latest bcryptjs@latest
 - Add NuxtLayout component in App.vue
 - Create components directory in the app directory
 - Inside componentsdirectory, add app-header.vue
+
+## Sign Up/Sign In Page
+- Create auth layout (auth.vue)
+- Navigate to pages/auth/sign-up.vue
+- Create script setup
+- Create definePageMeta and set the layout to auth
+- Import yup 
+- Create states
+  -type
+  -loading
+  -formData
+- Create onSubmit async function
+- Create the form 
